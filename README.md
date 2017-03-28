@@ -10,8 +10,7 @@
   而想要播放完第一个播放第二个应该要写js来控制加载。
 #### 如何使其在播放完第一段音频时继续播放下一段？
 - 不要设定```audio```的```loop```属性，当音频播放结束时即可触发```ended```事件。监听该事件，改变```audio.src```的值并通过```audio.load```方法重新加载音频并播放。应该注意的时要设定```audio```的```autoplay```属性；
-- ```
-audio.addEventListener('ended', function() {
+- ```audio.addEventListener('ended', function() {
     audio.src = "../MP3/music (2).mp3";
     audio.load();
 })```
